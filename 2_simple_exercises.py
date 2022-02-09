@@ -21,7 +21,7 @@ print(sampleDict['class']['student']['marks']['history'])
 dict={"son's name": "Lucas", "son's eyes": "green", "son's height": 32, "son's weight": 25}
 
 dict["son's height"] += 2
-print(dict["son's height"])
+print(dict)
 
 
 # 3) Given a Python dictionary, Change Brad’s salary to 8500
@@ -33,7 +33,7 @@ sampleDict = {
 }
 
 sampleDict['emp3']['salary'] = 8500
-print(sampleDict['emp3']['salary'])
+print(sampleDict)
 
 
 # 4 )Given the dictionary below, add a new key - 'work' with the values shown below:

@@ -2,6 +2,8 @@
 # a doctor's office. Using the dictionary, create a csv file that has details
 # for each space represented as rows. Name your file 'retail_space.csv.
 
+import csv
+from statistics import median
 
 '''
 Your final output should look like:
@@ -12,11 +14,7 @@ room-number,use,sq-ft,price
 102,examination,125,150
 103,examination,125,150
 104,office,150,100
-
 '''
-
-
-
 
 datastore = { "medical":[
       { "room-number": 100,
@@ -47,3 +45,10 @@ datastore = { "medical":[
 
       ]
 }
+
+retail_spaces = open('retail_spaces.csv', 'w', newline = '')
+retail_spaces_file = csv.writer(retail_spaces, delimiter = ',')
+
+for dict in datastore["medical"]:
+  temp_list = [dict['room-number'], dict['use'], dict['sq-ft'], dict['price']]
+  retail_spaces_file.writerow(temp_list)
