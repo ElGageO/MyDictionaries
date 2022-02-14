@@ -49,6 +49,9 @@ datastore = { "medical":[
 retail_spaces = open('retail_spaces.csv', 'w', newline = '')
 retail_spaces_file = csv.writer(retail_spaces, delimiter = ',')
 
+headers = ['room-number', 'use', 'sq-ft', 'price']
+retail_spaces_file.writerow(headers)
+
 for dict in datastore["medical"]:
   temp_list = [dict['room-number'], dict['use'], dict['sq-ft'], dict['price']]
   retail_spaces_file.writerow(temp_list)
