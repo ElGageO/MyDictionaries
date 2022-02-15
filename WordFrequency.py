@@ -4,7 +4,6 @@ ai_text = list(ai_text_file)
 ai_text_list = ai_text[0].split()
 word_list = []
 
-# use .isalnum() to remove all special chars
 for word in ai_text_list:
     temp_str = ''
     if word.isalnum():
@@ -16,4 +15,10 @@ for word in ai_text_list:
     word = temp_str
     word_list.append(word.lower())
 
-print(word_list)
+unique_word_list = []
+word_counter_dict = {}
+
+for word in word_list:
+    if word not in unique_word_list:
+        unique_word_list.append(word)
+
