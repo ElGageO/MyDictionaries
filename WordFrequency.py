@@ -15,10 +15,11 @@ for word in ai_text_list:
     word = temp_str
     word_list.append(word.lower())
 
-unique_word_list = []
 word_counter_dict = {}
 
 for word in word_list:
-    if word not in unique_word_list:
-        unique_word_list.append(word)
+    word_count = word_list.count(word)
+    word_counter_dict[word] = word_count
 
+for word in word_counter_dict:
+    print(word, word_counter_dict[word])
